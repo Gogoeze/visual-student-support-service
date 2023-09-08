@@ -101,3 +101,40 @@
     
 })(jQuery);
 
+// form test starts...........
+
+function validateForm() {
+    let x = {
+    fname: document.forms["studentEase"]["fname"].value,
+      email: document.forms["studentEase"]["email"].value,
+      subject: document.forms["studentEase"]["subject"].value,
+      message: document.forms["studentEase"]["message"].value,
+    };
+    
+    if (x.fname == "") {
+      alert("Name field cannot be empty");
+      return false;
+    }
+    if (x.email == "") {
+      alert("Email field cannot be empty");
+      return false;
+    }
+    if (x.subject == "") {
+      alert("Subject field cannot be empty");
+      return false;
+    }
+    if (x.message == "") {
+      alert("Message field cannot be empty");
+      return false;
+    }
+  
+    // Clear the form fields after displaying alerts
+    document.forms["studentEase"]["fname"].value = "";
+    document.forms["studentEase"]["email"].value = "";
+    document.forms["studentEase"]["subject"].value = "";
+    document.forms["studentEase"]["message"].value = "";
+  
+    return true; // Allow form submission
+  }
+  
+        // form tests ends................
